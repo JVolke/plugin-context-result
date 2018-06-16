@@ -48,7 +48,7 @@ Leider greifen diese Einstellungen noch nicht überall, so werden Artikellisten,
 ### Eigene Werte ergänzen
 Um jetzt eigene Werte, wie den Bestand, zu ergänzen muss man nachdem man den Bereich gewählt hat das Plugin in der Übersicht öffnen und geht hier auf Dateien. Jetzt wählt man beispielsweise die SingleItem.fields.json Datei aus und öffnet diese. Nun fügt man für den Bestand folgende Zeile zwischen den Werten ein:
 
-    "stock.\*",
+    "stock.*",
 
 **Wichtig**: Folgen Werte muss hinter dem eigenen Wert noch ein Komma gesetzt werden. Setzt man dagegen den eigenen Wert ans Ende der Datei, dann kann das Komma weggelassen werden. Alle Werte müssen aber innerhabl der eckigen Klammer stehen.
 
