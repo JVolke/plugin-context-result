@@ -29,8 +29,8 @@ In der Plugin-Konfiguration könnt Ihr unter Basis-Einstellungen eine oder mehre
 
 <table>
 <tr>
-<td> **Option in Konfiguration** </td>
-<td> **Bereich der betroffen ist** </td>
+<td> __Option in Konfiguration__ </td>
+<td> __Bereich der betroffen ist__ </td>
 </tr>
 <tr>
 <td>Die Artikel-Ansicht</td>
