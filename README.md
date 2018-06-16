@@ -3,7 +3,7 @@
 Dieses Plugin erlaubt es die Context-Klassen von Ceres zu erweitern und ResultFields zu überschreiben. Das Plugin richtet sich dabei an alle, die CeresVanilla direkt vom Marketplace nutzen und keine Möglichkeit haben eigene Dateien zum Plugin hinzuzufügen. Generell kann dieses Plugin aber mit jedem Theme verwendet werden.
 
 <div class="alert alert-warning" role="alert">
-Das Plugin basiert auf Ceres 2.10. Kleiner oder höhere Versionen können dazu führen, dass das Plugin nicht mehr wie erwartet funktioniert.
+Das Plugin basiert auf Ceres 2.10. Kleinere oder höhere Versionen können dazu führen, dass das Plugin nicht mehr wie erwartet funktioniert.
 </div>
 
 ## Wie richte ich das Plugin ein?

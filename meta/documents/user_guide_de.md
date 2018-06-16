@@ -9,6 +9,7 @@ Das Plugin basiert auf Ceres 2.10. Kleiner oder höhere Versionen können dazu f
 <div class="alert alert-warning" role="alert">
 Wenn Ihr ein ClosedSource Theme verwendet, dann macht dieses Plugin keinen Sinn, da Ihr hier keine Anpassungen im Theme vornehmen könnt.
 </div>
+
 ## Wie richte ich das Plugin ein?
 Zuerst muss das Plugin hier im Marketplace "gekauft" werden. Anschließend sollte das Plugin unter **Plugin => Plugin Übersicht** angezeigt werden, wenn Ihr in den Filter Einstellungen des aktuellen Plugin-Sets folgendes Auswählt
 - Herkunft = Marketplace
