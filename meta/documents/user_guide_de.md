@@ -74,8 +74,8 @@ In der Plugin-Konfiguration findet Ihr unter den ResultFields den Bereich Ceres 
 
 <table>
 <tr>
-<td>Plugin-Einstellung</td>
-<td>Der betroffene Ceres-Context</td>
+<td>###Plugin-Einstellung</td>
+<td>###Der betroffene Ceres-Context</td>
 </tr>
 <tr>
 <td>Context für SingleItem erweitern</td>
@@ -104,4 +104,4 @@ Im Context für die Artikel-Ansicht ist bereits die Ausgabe für Freitext-Felder
 
     {{ freeField.free1 }}
 
-für das Freitext-Feld 1 realisieren. 
+für das Freitext-Feld 1 realisieren.
