@@ -1,1 +1,3 @@
-[Weitere Informationen](https://developers.plentymarkets.com/marketplace/plugin-requirements#marketplace-support-contact)
+### Support
+* Kein offizieller Support
+* Fragen können im [Forum](https://forum.plentymarkets.com/c/non-plenty-plugins) gestellt werden. Bitte Vorher Anleitung lesen !!!

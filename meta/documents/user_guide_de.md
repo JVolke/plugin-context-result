@@ -1,4 +1,4 @@
-# Plugin Context Result
+# Plugin ContextResult
 
 Dieses Plugin erlaubt es die Context-Klassen von Ceres zu erweitern und ResultFields zu überschreiben. Das Plugin richtet sich dabei an alle, die CeresVanilla direkt vom Marketplace nutzen und keine Möglichkeit haben eigene Dateien zum Plugin hinzuzufügen. Generell kann dieses Plugin aber mit jedem Theme verwendet werden.
 
@@ -9,7 +9,7 @@ Zuerst muss das Plugin hier im Marketplace "gekauft" werden. Anschließend sollt
 
 Nun kann man in der Spalte Aktion auf **Plugin Installieren** klicken, damit das Plugin installiert wird.
 
-Wurde das Plugin installiert sollte für diese Plugin die Position festgelegt werden. Die Position sollte dabei so gewählt werden, dass dieses Plugin zwischen IO und Eurem Theme sich einordnet. Beispielsweise könnte Ihr folgende Positionen verwenden:
+Wurde das Plugin installiert sollte für diese Plugin die Position festgelegt werden. Die Position sollte dabei so gewählt werden, dass sich dieses Plugin zwischen IO und Eurem Theme einordnet. Beispielsweise könnt Ihr folgende Positionen verwenden:
 
 - Ceres = 910
 - Theme-Plugin = 911
@@ -27,11 +27,24 @@ Die Daten die hier zusätzlich angezeigt werden können sind aber begrenzt. Es k
 ### Einstellung
 In der Plugin-Konfiguration könnt Ihr unter Basis-Einstellungen eine oder mehrere der Bereiche auswählen, für die Ihr weitere Daten benötigt. Zur Auswahl stehen:
 
-| Plugin-Einstellung | Der betroffene Ceres-Bereich |
-| --- | --- |
-| Die Artikel-Ansicht | Bereich Item im Ceres |
-| Die Artikel-Kategorie- und Sucherergebnisseiten |Bereich Category/Item und ItemList im Ceres |
-| Die Warenkorbansicht | Bereich Basket im Ceres |
+<table>
+<thead>
+<th>Plugin-Einstellung</th>
+<th>Der betroffene Ceres-Bereich</th>
+</thead>
+<tr>
+<td>Die Artikel-Ansicht</td>
+<td>Bereich Item im Ceres</td>
+</tr>
+<tr>
+<td>Die Artikel-Kategorie- und Sucherergebnisseiten</td>
+<td>Bereich Category/Item und ItemList im Ceres</td>
+</tr>
+<tr>
+<td>Die Warenkorbansicht</td>
+<td>Bereich Basket im Ceres</td>
+</tr>
+</table>
 
 _Hinweis:_
 Leider greifen diese Einstellungen noch nicht überall, so werden Artikellisten, wie das Cross Selling aktuell noch nicht bei diesen _Overrides_ berücksichtigt.
@@ -47,7 +60,8 @@ Hat man die Werte geändert, dann muss man das Plugin einmal neu bereitstellen, 
 
 ## Context-Klassen erweitern
 ### Einführung
-Die Context-Klassen dienen der Aufbereitung der Daten, die durch IO bereitgestellt werden. Außerdem können die Context-Klassen auch dafür verwendet werden, mit den verfügbaren Daten weitere Abfragen zu machen. Welche Context-Klassen von Ceres in welchen Bereich verwendet werden sieht man am besten in der ServiceProvider.php von Ceres in der Variable $templateKeyToViewMap werden alle Context-Klassen einzelnen Template Bereichen zugeordnet.
+Die Context-Klassen dienen der Aufbereitung der Daten, die durch IO bereitgestellt werden. Außerdem können die Context-Klassen auch dafür verwendet werden, mit den verfügbaren Daten weitere Abfragen zu machen. Welche Context-Klassen von Ceres in welchen Bereich verwendet werden sieht man am besten in der  werden alle
+[ServiceProvider.php von Ceres in der Variable $templateKeyToViewMap](https://github.com/plentymarkets/plugin-ceres/blob/stable/src/Providers/TemplateServiceProvider.php) Context-Klassen einzelnen Template Bereichen zugeordnet.
 
 Ich habe mich hier auf 5 Context-Klassen beschränkt, erweitert werden können
 
@@ -63,13 +77,32 @@ Für die meisten dürfte aber das Erweitern des SingleItemContext bereits ausrei
 ### Einstellung
 In der Plugin-Konfiguration findet Ihr unter den ResultFields den Bereich Ceres Context überschreiben. Hier könnt Ihr einen oder mehrere Context-Klassen auswählen, die Ihr nutzen wollt.
 
-| Plugin-Einstellung | Der betroffene Ceres-Context |
-| --- | --- |
-| Context für SingleItem erweitern | SingleItemContext |
-| Context für Content Kategorien erweitern | CategoryContext |
-| Context für Artikel Kategorien erweitern | CategoryItemContext |
-| Globalen Context erweitern | GlobalContext |
-| Context für Suchergebnisseite erweitern |ItemSearchContext |
+<table>
+<thead>
+<th>Plugin-Einstellung</th>
+<th>Der betroffene Ceres-Context</th>
+</thead>
+<tr>
+<td>Context für SingleItem erweitern</td>
+<td>SingleItemContext</td>
+</tr>
+<tr>
+<td>Context für Content Kategorien erweitern</td>
+<td>CategoryContext</td>
+</tr>
+<tr>
+<td>Context für Artikel Kategorien erweitern</td>
+<td>CategoryItemContext</td>
+</tr>
+<tr>
+<td>Globalen Context erweitern</td>
+<td>GlobalContext</td>
+</tr>
+<tr>
+<td>Context für Suchergebnisseite erweitern</td>
+<td>ItemSearchContext</td>
+</tr>
+</table>
 
 __Hinweis:__
 Im Context für die Artikel-Ansicht ist bereits die Ausgabe für Freitext-Felder integriert. Wenn man also in seinem Theme auf Freitext-Felder zugreifen möchte, dann kann man dies über
