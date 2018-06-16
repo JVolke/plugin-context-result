@@ -50,6 +50,6 @@ Um jetzt eigene Werte, wie den Bestand, zu ergänzen muss man nachdem man den Be
 
     "stock.*",
 
-**Wichtig**: Folgen Werte muss hinter dem eigenen Wert noch ein Komma gesetzt werden. Setzt man dagegen den eigenen Wert ans Ende der Datei, dann kann das Komma weggelassen werden. Alle Werte müssen aber innerhabl der eckigen Klammer stehen.
+**Wichtig**: Folgen Werte muss hinter dem eigenen Wert noch ein Komma gesetzt werden. Setzt man dagegen den eigenen Wert ans Ende der Datei, dann kann das Komma weggelassen werden. Alle Werte müssen aber innerhalb der eckigen Klammer stehen.
 
 Hat man die Werte geändert, dann muss man das Plugin einmal neu bereitstellen, damit die eigenen Werte auch greifen.
