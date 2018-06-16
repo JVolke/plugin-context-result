@@ -64,7 +64,7 @@ class ContextResultServiceProvider extends ServiceProvider
 
          $enabledContexts = explode(", ", $config->get("ContextResult.context.override"));
 
-         if (in_array("single_itemContext", $enabledOverrides) || in_array("all", $enabledOverrides))
+         if (in_array("single_itemContext", $enabledContexts) || in_array("all", $enabledContexts))
          {
            $dispatcher->listen('IO.ctx.item', function (TemplateContainer $templateContainer, $templateData = [])
             {
@@ -73,7 +73,7 @@ class ContextResultServiceProvider extends ServiceProvider
             }, 0);
         }
 
-        if (in_array("category_contentContext", $enabledOverrides) || in_array("all", $enabledOverrides))
+        if (in_array("category_contentContext", $enabledContexts) || in_array("all", $enabledContexts))
         {
           $dispatcher->listen('IO.ctx.item', function (TemplateContainer $templateContainer, $templateData = [])
            {
@@ -82,7 +82,7 @@ class ContextResultServiceProvider extends ServiceProvider
            }, 0);
        }
 
-       if (in_array("category_itemContext", $enabledOverrides) || in_array("all", $enabledOverrides))
+       if (in_array("category_itemContext", $enabledContexts) || in_array("all", $enabledContexts))
        {
          $dispatcher->listen('IO.ctx.item', function (TemplateContainer $templateContainer, $templateData = [])
           {
@@ -91,7 +91,7 @@ class ContextResultServiceProvider extends ServiceProvider
           }, 0);
       }
 
-      if (in_array("global_Context", $enabledOverrides) || in_array("all", $enabledOverrides))
+      if (in_array("global_Context", $enabledContexts) || in_array("all", $enabledContexts))
       {
         $dispatcher->listen('IO.ctx.item', function (TemplateContainer $templateContainer, $templateData = [])
          {
@@ -100,7 +100,7 @@ class ContextResultServiceProvider extends ServiceProvider
          }, 0);
       }
 
-      if (in_array("search_context", $enabledOverrides) || in_array("all", $enabledOverrides))
+      if (in_array("search_context", $enabledContexts) || in_array("all", $enabledContexts))
       {
         $dispatcher->listen('IO.ctx.item', function (TemplateContainer $templateContainer, $templateData = [])
          {
