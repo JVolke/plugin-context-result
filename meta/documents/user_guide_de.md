@@ -29,10 +29,6 @@ In der Plugin-Konfiguration könnt Ihr unter Basis-Einstellungen eine oder mehre
 
 <table>
 <tr>
-<td> __Option in Konfiguration__ </td>
-<td> __Bereich der betroffen ist__ </td>
-</tr>
-<tr>
 <td>Die Artikel-Ansicht</td>
 <td>Bereich Item im Ceres</td>
 </tr>
@@ -45,3 +41,15 @@ In der Plugin-Konfiguration könnt Ihr unter Basis-Einstellungen eine oder mehre
 <td>Bereich Basket im Ceres</td>
 </tr>
 </table>
+
+_Hinweis:_
+Leider greifen diese Einstellungen noch nicht überall, so werden Artikellisten, wie das Cross Selling aktuell noch nicht bei diesen _Overrides_ berücksichtigt.
+
+### Eigene Werte ergänzen
+Um jetzt eigene Werte, wie den Bestand, zu ergänzen muss man nachdem man den Bereich gewählt hat das Plugin in der Übersicht öffnen und geht hier auf Dateien. Jetzt wählt man beispielsweise die SingleItem.fields.json Datei aus und öffnet diese. Nun fügt man für den Bestand folgende Zeile zwischen den Werten ein:
+
+    "stock.\*",
+
+**Wichtig**: Folgen Werte muss hinter dem eigenen Wert noch ein Komma gesetzt werden. Setzt man dagegen den eigenen Wert ans Ende der Datei, dann kann das Komma weggelassen werden. Alle Werte müssen aber innerhabl der eckigen Klammer stehen.
+
+Hat man die Werte geändert, dann muss man das Plugin einmal neu bereitstellen, damit die eigenen Werte auch greifen.
