@@ -28,10 +28,10 @@ Die Daten die hier zusätzlich angezeigt werden können sind aber begrenzt. Es k
 In der Plugin-Konfiguration könnt Ihr unter Basis-Einstellungen eine oder mehrere der Bereiche auswählen, für die Ihr weitere Daten benötigt. Zur Auswahl stehen:
 
 <table>
-<thead>
-<td>**Option in Konfiguration**</td>
-<td>**Bereich der betroffen ist**</td>
-</thead>
+<tr>
+<td> **Option in Konfiguration** </td>
+<td> **Bereich der betroffen ist** </td>
+</tr>
 <tr>
 <td>Die Artikel-Ansicht</td>
 <td>Bereich Item im Ceres</td>
