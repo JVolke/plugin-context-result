@@ -13,6 +13,10 @@ use IO\Services\ItemSearch\Helper\ResultFieldTemplate;
  * Include Contexts
 */
 use ContextResult\Contexts\ContextResultSingleItemContext;
+use ContextResult\Contexts\ContextResultCategoryContext;
+use ContextResult\Contexts\ContextResultCategoryItemContext;
+use ContextResult\Contexts\ContextResultGlobalContext;
+use ContextResult\Contexts\ContextResultItemSearchContext;
 
 /**
  * Class ContextResultServiceProvider
@@ -58,11 +62,53 @@ class ContextResultServiceProvider extends ServiceProvider
            }, 0);
          }
 
+         $enabledContexts = explode(", ", $config->get("ContextResult.context.override"));
+
+         if (in_array("single_itemContext", $enabledOverrides) || in_array("all", $enabledOverrides))
+         {
+           $dispatcher->listen('IO.ctx.item', function (TemplateContainer $templateContainer, $templateData = [])
+            {
+                $templateContainer->setContext( ContextResultSingleItemContext::class);
+                return false;
+            }, 0);
+        }
+
+        if (in_array("category_contentContext", $enabledOverrides) || in_array("all", $enabledOverrides))
+        {
+          $dispatcher->listen('IO.ctx.item', function (TemplateContainer $templateContainer, $templateData = [])
+           {
+               $templateContainer->setContext( ContextResultCategoryContext::class);
+               return false;
+           }, 0);
+       }
+
+       if (in_array("category_itemContext", $enabledOverrides) || in_array("all", $enabledOverrides))
+       {
          $dispatcher->listen('IO.ctx.item', function (TemplateContainer $templateContainer, $templateData = [])
           {
-              $templateContainer->setContext( ContextResultSingleItemContext::class);
+              $templateContainer->setContext( ContextResultCategoryItemContext::class);
               return false;
           }, 0);
+      }
+
+      if (in_array("global_Context", $enabledOverrides) || in_array("all", $enabledOverrides))
+      {
+        $dispatcher->listen('IO.ctx.item', function (TemplateContainer $templateContainer, $templateData = [])
+         {
+             $templateContainer->setContext( ContextResultGlobalContext::class);
+             return false;
+         }, 0);
+      }
+
+      if (in_array("search_context", $enabledOverrides) || in_array("all", $enabledOverrides))
+      {
+        $dispatcher->listen('IO.ctx.item', function (TemplateContainer $templateContainer, $templateData = [])
+         {
+             $templateContainer->setContext( ContextResultItemSearchContext::class);
+             return false;
+         }, 0);
+      }
+
 
     }
 

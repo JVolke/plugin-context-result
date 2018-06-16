@@ -25,7 +25,37 @@
                             }
                         ]
                     }
-                }
+                },
+                "context.override": {
+                      "type": "multiCheckBox",
+                      "required": false,
+                      "label": "Config.contextOverride",
+                      "options": {
+                          "defaultValue": "",
+                          "checkBoxValues": [
+                              {
+                                  "value": "single_itemContext",
+                                  "caption": "Config.singleItemContextOverride"
+                              },
+                              {
+                                  "value": "category_contentContext",
+                                  "caption": "Config.contentCategoryContextOverride"
+                              },
+                              {
+                                  "value": "category_itemContext",
+                                  "caption": "Config.itemCategoryContextOverride"
+                              },
+                              {
+                                  "value": "global_Context",
+                                  "caption": "Config.globalContextOverride"
+                              },
+                              {
+                                  "value": "search_context",
+                                  "caption": "Config.searchContextOverride"
+                              }
+                          ]
+                      }
+                  }
             }
           }
     }
