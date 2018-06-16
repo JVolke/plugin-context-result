@@ -1,1 +1,32 @@
-[]
+{
+    "formatVersion": 1,
+    "menu": {
+      "Config.Basis": {
+            "label": "Config.Basis",
+            "formFields": {
+              "fields.override": {
+                    "type": "multiCheckBox",
+                    "required": false,
+                    "label": "Config.fieldsOverride",
+                    "options": {
+                        "defaultValue": "",
+                        "checkBoxValues": [
+                            {
+                                "value": "single_item",
+                                "caption": "Config.singleItemOverride"
+                            },
+                            {
+                                "value": "list_item",
+                                "caption": "Config.listItemOverride"
+                            },
+                            {
+                                "value": "basket_item",
+                                "caption": "Config.basketItemOverride"
+                            }
+                        ]
+                    }
+                }
+            }
+          }
+    }
+}
