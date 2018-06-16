@@ -53,3 +53,55 @@ Um jetzt eigene Werte, wie den Bestand, zu ergänzen muss man nachdem man den Be
 **Wichtig**: Folgen Werte muss hinter dem eigenen Wert noch ein Komma gesetzt werden. Setzt man dagegen den eigenen Wert ans Ende der Datei, dann kann das Komma weggelassen werden. Alle Werte müssen aber innerhalb der eckigen Klammer stehen.
 
 Hat man die Werte geändert, dann muss man das Plugin einmal neu bereitstellen, damit die eigenen Werte auch greifen.
+
+## Context-Klassen erweitern
+### Einführung
+Die Context-Klassen dienen der Aufbereitung der Daten, die durch IO bereitgestellt werden. Außerdem können die Context-Klassen auch dafür verwendet werden, mit den verfügbaren Daten weitere Abfragen zu machen. Welche Context-Klassen von Ceres in welchen Bereich verwendet werden sieht man am besten in der ServiceProvider.php von Ceres in der Variable $templateKeyToViewMap werden alle Context-Klassen einzelnen Template Bereichen zugeordnet.
+
+Ich habe mich hier auf 5 Context-Klassen beschränkt, erweitert werden können
+
+* GlobalContext
+* CategoryContext
+* CategoryItemContext
+* SingleItemContext
+* ItemSearchContext
+
+Für die meisten dürfte aber das Erweitern des SingleItemContext bereits ausreichend sein.
+**Die Erweiterungen enthalten aktuell nur den Basis-Code um die bestehenden Context-Klassen zu erweitern. Man muss also eigene Funktionen noch einfügen.**
+
+### Einstellung
+In der Plugin-Konfiguration findet Ihr unter den ResultFields den Bereich Ceres Context überschreiben. Hier könnt Ihr einen oder mehrere Context-Klassen auswählen, die Ihr nutzen wollt.
+
+<table>
+<tr>
+<td>Plugin-Einstellung</td>
+<td>Der betroffene Ceres-Context</td>
+</tr>
+<tr>
+<td>Context für SingleItem erweitern</td>
+<td>SingleItemContext</td>
+</tr>
+<tr>
+<td>Context für Content Kategorien erweitern</td>
+<td>CategoryContext</td>
+</tr>
+<tr>
+<td>Context für Artikel Kategorien erweitern</td>
+<td>CategoryItemContext</td>
+</tr>
+<tr>
+<td>Globalen Context erweitern</td>
+<td>GlobalContext</td>
+</tr>
+<tr>
+<td>Context für Suchergebnisseite erweitern</td>
+<td>ItemSearchContext</td>
+</tr>
+</table>
+
+__Hinweis:__
+Im Context für die Artikel-Ansicht ist bereits die Ausgabe für Freitext-Felder integriert. Wenn man also in seinem Theme auf Freitext-Felder zugreifen möchte, dann kann man dies über
+
+    {{ freeField.free1 }}
+
+für das Freitext-Feld 1 realisieren. 
