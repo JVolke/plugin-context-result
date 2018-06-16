@@ -3,11 +3,11 @@
 Dieses Plugin erlaubt es die Context-Klassen von Ceres zu erweitern und ResultFields zu überschreiben. Das Plugin richtet sich dabei an alle, die CeresVanilla direkt vom Marketplace nutzen und keine Möglichkeit haben eigene Dateien zum Plugin hinzuzufügen. Generell kann dieses Plugin aber mit jedem Theme verwendet werden.
 
 ## Wie richte ich das Plugin ein?
-Zuerst muss das Plugin hier im Marketplace "gekauft" werden. Anschließend sollte das Plugin unter *Plugin => Plugin Übersicht* angezeigt werden, wenn Ihr in den Filter Einstellungen des aktuellen Plugin-Sets folgendes Auswählt
+Zuerst muss das Plugin hier im Marketplace "gekauft" werden. Anschließend sollte das Plugin unter **Plugin => Plugin Übersicht** angezeigt werden, wenn Ihr in den Filter Einstellungen des aktuellen Plugin-Sets folgendes Auswählt
 - Herkunft = Marketplace
 - Installiert = Nicht Installiert
 
-Nun kann man in der Spalte Aktion auf *Plugin Installieren* klicken, damit das Plugin installiert wird.
+Nun kann man in der Spalte Aktion auf **Plugin Installieren** klicken, damit das Plugin installiert wird.
 
 Wurde das Plugin installiert sollte für diese Plugin die Position festgelegt werden. Die Position sollte dabei so gewählt werden, dass dieses Plugin zwischen IO und Eurem Theme sich einordnet. Beispielsweise könnte Ihr folgende Positionen verwenden:
 
@@ -29,8 +29,8 @@ In der Plugin-Konfiguration könnt Ihr unter Basis-Einstellungen eine oder mehre
 
 <table>
 <thead>
-<td>Option in Konfiguration</td>
-<td>Bereich der betroffen ist</td>
+<td>**Option in Konfiguration**</td>
+<td>**Bereich der betroffen ist**</td>
 </thead>
 <tr>
 <td>Die Artikel-Ansicht</td>
