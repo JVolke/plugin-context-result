@@ -1,0 +1,19 @@
+{
+  "@plentymarkets/generator-plugin": {
+    "promptValues": {
+      "type": "theme"
+    },
+    "answers": {
+      "name": "ContextResult",
+      "author": "Jens Volke",
+      "license": "AGPL-3.0",
+      "shortDescription": "Plugin zum überschreiben der Ceres-Context-Klassen und ResultFields",
+      "price": "0.00",
+      "version": "0.0.1",
+      "categories": [
+        "3527"
+      ],
+      "type": "theme"
+    }
+  }
+}

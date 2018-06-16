@@ -1,0 +1,12 @@
+{
+    "version"           :   "0.0.1",
+    "license"           :   "AGPL-3.0",
+    "name"              :   "ContextResult",
+    "shortDescription"  :   { "de": "Plugin zum überschreiben der Ceres-Context-Klassen und ResultFields", "en": "TODO add manually" },
+    "namespace"         :   "ContextResult",
+    "author"            :   "Jens Volke",
+    "price"             :   0.00,
+    "categories"        :   [3527],
+    "type"              :   "theme",
+    "serviceProvider"   :   "ContextResult\\Providers\\ContextResultServiceProvider"
+}
