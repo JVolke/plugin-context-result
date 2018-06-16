@@ -27,20 +27,11 @@ Die Daten die hier zusätzlich angezeigt werden können sind aber begrenzt. Es k
 ### Einstellung
 In der Plugin-Konfiguration könnt Ihr unter Basis-Einstellungen eine oder mehrere der Bereiche auswählen, für die Ihr weitere Daten benötigt. Zur Auswahl stehen:
 
-<table>
-<tr>
-<td>Die Artikel-Ansicht</td>
-<td>Bereich Item im Ceres</td>
-</tr>
-<tr>
-<td>Die Artikel-Kategorie- und Sucherergebnisseiten</td>
-<td>Bereich Category/Item und ItemList im Ceres</td>
-</tr>
-<tr>
-<td>Die Warenkorbansicht</td>
-<td>Bereich Basket im Ceres</td>
-</tr>
-</table>
+| Plugin-Einstellung | Der betroffene Ceres-Bereich |
+| --- | --- |
+| Die Artikel-Ansicht | Bereich Item im Ceres |
+| Die Artikel-Kategorie- und Sucherergebnisseiten |Bereich Category/Item und ItemList im Ceres |
+| Die Warenkorbansicht | Bereich Basket im Ceres |
 
 _Hinweis:_
 Leider greifen diese Einstellungen noch nicht überall, so werden Artikellisten, wie das Cross Selling aktuell noch nicht bei diesen _Overrides_ berücksichtigt.
@@ -72,32 +63,13 @@ Für die meisten dürfte aber das Erweitern des SingleItemContext bereits ausrei
 ### Einstellung
 In der Plugin-Konfiguration findet Ihr unter den ResultFields den Bereich Ceres Context überschreiben. Hier könnt Ihr einen oder mehrere Context-Klassen auswählen, die Ihr nutzen wollt.
 
-<table>
-<tr>
-<td>###Plugin-Einstellung</td>
-<td>###Der betroffene Ceres-Context</td>
-</tr>
-<tr>
-<td>Context für SingleItem erweitern</td>
-<td>SingleItemContext</td>
-</tr>
-<tr>
-<td>Context für Content Kategorien erweitern</td>
-<td>CategoryContext</td>
-</tr>
-<tr>
-<td>Context für Artikel Kategorien erweitern</td>
-<td>CategoryItemContext</td>
-</tr>
-<tr>
-<td>Globalen Context erweitern</td>
-<td>GlobalContext</td>
-</tr>
-<tr>
-<td>Context für Suchergebnisseite erweitern</td>
-<td>ItemSearchContext</td>
-</tr>
-</table>
+| Plugin-Einstellung | Der betroffene Ceres-Context |
+| --- | --- |
+| Context für SingleItem erweitern | SingleItemContext |
+| Context für Content Kategorien erweitern | CategoryContext |
+| Context für Artikel Kategorien erweitern | CategoryItemContext |
+| Globalen Context erweitern | GlobalContext |
+| Context für Suchergebnisseite erweitern |ItemSearchContext |
 
 __Hinweis:__
 Im Context für die Artikel-Ansicht ist bereits die Ausgabe für Freitext-Felder integriert. Wenn man also in seinem Theme auf Freitext-Felder zugreifen möchte, dann kann man dies über
