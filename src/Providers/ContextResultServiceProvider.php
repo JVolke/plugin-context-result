@@ -11,7 +11,7 @@ use IO\Services\ItemSearch\Helper\ResultFieldTemplate;
 /**
  * Include Contexts
 */
-use ContextResult\Contexts\SingleItemContext;
+use ContextResult\Contexts\ContextResultSingleItemContext;
 
 /**
  * Class ContextResultServiceProvider
