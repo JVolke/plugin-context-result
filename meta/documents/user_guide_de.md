@@ -60,8 +60,7 @@ Hat man die Werte geändert, dann muss man das Plugin einmal neu bereitstellen, 
 
 ## Context-Klassen erweitern
 ### Einführung
-Die Context-Klassen dienen der Aufbereitung der Daten, die durch IO bereitgestellt werden. Außerdem können die Context-Klassen auch dafür verwendet werden, mit den verfügbaren Daten weitere Abfragen zu machen. Welche Context-Klassen von Ceres in welchen Bereich verwendet werden sieht man am besten in der  werden alle
-[ServiceProvider.php von Ceres in der Variable $templateKeyToViewMap](https://github.com/plentymarkets/plugin-ceres/blob/stable/src/Providers/TemplateServiceProvider.php) Context-Klassen einzelnen Template Bereichen zugeordnet.
+Die Context-Klassen dienen der Aufbereitung der Daten, die durch IO bereitgestellt werden. Außerdem können die Context-Klassen auch dafür verwendet werden, mit den verfügbaren Daten weitere Abfragen zu machen. Welche Context-Klassen von Ceres in welchen Bereich verwendet werden sieht man am besten in der [ServiceProvider.php von Ceres in der Variable $templateKeyToViewMap](https://github.com/plentymarkets/plugin-ceres/blob/stable/src/Providers/TemplateServiceProvider.php). Hier werden alle Context-Klassen einzelnen Template Bereichen zugeordnet.
 
 Ich habe mich hier auf 5 Context-Klassen beschränkt, erweitert werden können
 
