@@ -80,4 +80,6 @@ Im Context für die Artikel-Ansicht ist bereits die Ausgabe für Freitext-Felder
 
     {{ freeField.free1 }}
 
-für das Freitext-Feld 1 realisieren.
+realisieren. In diesem Beispiel würde man auf das Freitext-Feld 1 zugreifen, die anderen Freitext-Felder lassen sich genauso ansteuern.
+
+Wie die Context-Klassen prinzpiell aufgebaut sind, erfahrt Ihr auf [developers.plentymarkets.com](https://developers.plentymarkets.com/dev-doc/cookbook#changing-contexts)
