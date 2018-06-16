@@ -5,7 +5,7 @@ namespace ContextResult\Contexts;
 use IO\Helper\ContextInterface;
 use Ceres\Contexts\GlobalContext;
 
-class GlobalContextGlobalContext extends GlobalContext implements ContextInterface
+class ContextResultGlobalContext extends GlobalContext implements ContextInterface
 {
   public function init($params)
   {
