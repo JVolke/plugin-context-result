@@ -9,6 +9,11 @@ use IO\Helper\ComponentContainer;
 use IO\Services\ItemSearch\Helper\ResultFieldTemplate;
 
 /**
+ * Include Contexts
+*/
+use ContextResult\Contexts\SingleItemContext;
+
+/**
  * Class ContextResultServiceProvider
  * @package ContextResult\Providers
  */
@@ -41,6 +46,12 @@ class ContextResultServiceProvider extends ServiceProvider
                      ResultFieldTemplate::TEMPLATE_BASKET_ITEM    => 'ContextResult::ResultFields.BasketItem'
                  ]);
          }, 0);
+
+         $dispatcher->listen('IO.ctx.item', function (TemplateContainer $templateContainer, $templateData = [])
+          {
+              $templateContainer->setContext( ContextResultSingleItemContext::class);
+              return false;
+          }, 0);
 
     }
 
