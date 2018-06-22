@@ -7,6 +7,7 @@ use IO\Services\ItemSearch\Factories\VariationSearchFactory;
 use IO\Services\ItemSearch\Services\ItemSearchService;
 use IO\Services\SessionStorageService;
 use IO\Services\TemplateConfigService;
+use IO\Services\UrlBuilder\CategoryUrlBuilder;
 use Plenty\Modules\Authorization\Services\AuthHelper;
 use Plenty\Modules\Item\Variation\Contracts\VariationRepositoryContract;
 use Plenty\Modules\Item\VariationDescription\Contracts\VariationDescriptionRepositoryContract;
