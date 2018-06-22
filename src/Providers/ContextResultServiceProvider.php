@@ -18,6 +18,8 @@ use ContextResult\Contexts\ContextResultCategoryItemContext;
 use ContextResult\Contexts\ContextResultGlobalContext;
 use ContextResult\Contexts\ContextResultItemSearchContext;
 
+/* Include own VariationBuilder */
+use ContextResult\Services\UrlBuilder\MyVariationUrlBuilder;
 /**
  * Class ContextResultServiceProvider
  * @package ContextResult\Providers
@@ -108,6 +110,9 @@ class ContextResultServiceProvider extends ServiceProvider
              return false;
          }, 0);
       }
+
+      /* Test Override VariationUrlBuilder */
+      $dispatcher->listen(VariationUrlBuilder::class, MyVariationUrlBuilder::class);
 
 
     }
