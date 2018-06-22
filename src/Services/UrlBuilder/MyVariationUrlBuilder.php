@@ -19,10 +19,11 @@ class MyVariationUrlBuilder
 
     public static function fillItemUrl( $itemData )
     {
+        $log = pluginApp(Loggable::class);
         $itemId = $itemData['item']['id'];
         $variationId = $itemData['variation']['id'];
-        $varitianResult = pluginApp(VariationRepositoryContract::class)->show($itemData['variation']['id'], ['variationProperties'], 'de');
-        $this->getLogger("ContextResult\Services\UrlBuilder")->error("variationResult", $varitianResult);
+        $variationResult = pluginApp(VariationRepositoryContract::class)->show($itemData['variation']['id'], ['variationProperties'], 'de');
+        $log->getLogger("ContextResult\Services\UrlBuilder")->error("variationResult", $variationResult);
         $defaultCategory = 0;
         if ( count($itemData['defaultCategories']) )
         {
