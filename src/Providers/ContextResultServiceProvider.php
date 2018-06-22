@@ -8,6 +8,7 @@ use IO\Helper\TemplateContainer;
 use IO\Helper\ComponentContainer;
 use Plenty\Plugin\ConfigRepository;
 use IO\Services\ItemSearch\Helper\ResultFieldTemplate;
+use IO\Services\UrlBuilder\VariationUrlBuilder;
 
 /**
  * Include Contexts
