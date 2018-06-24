@@ -32,7 +32,7 @@ class ContextResultServiceProvider extends ServiceProvider
     */
     public function register()
     {
-
+      $this->getApplication()->singleton('ContextResult\Services\MyUrlService');
     }
 
     public function boot(Dispatcher $dispatcher, ConfigRepository $config)
