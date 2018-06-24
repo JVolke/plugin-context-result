@@ -8,7 +8,7 @@ use IO\Helper\TemplateContainer;
 use IO\Helper\ComponentContainer;
 use Plenty\Plugin\ConfigRepository;
 use IO\Services\ItemSearch\Helper\ResultFieldTemplate;
-use IO\Services\UrlBuilder\VariationUrlBuilder;
+use IO\Services\UrlService;
 
 /**
  * Include Contexts
@@ -20,7 +20,7 @@ use ContextResult\Contexts\ContextResultGlobalContext;
 use ContextResult\Contexts\ContextResultItemSearchContext;
 
 /* Include own VariationBuilder */
-use ContextResult\Services\UrlBuilder\MyVariationUrlBuilder;
+use ContextResult\Services\MyUrlService;
 /**
  * Class ContextResultServiceProvider
  * @package ContextResult\Providers
@@ -113,7 +113,7 @@ class ContextResultServiceProvider extends ServiceProvider
       }
 
       /* Test Override VariationUrlBuilder */
-      $dispatcher->listen(VariationUrlBuilder::class, MyVariationUrlBuilder::class);
+      $dispatcher->listen(UrlService::class, MyUrlService::class);
 
 
     }
