@@ -4,6 +4,7 @@ namespace ContextResult\Services;
 
 use IO\Helper\MemoryCache;
 use IO\Services\UrlBuilder\CategoryUrlBuilder;
+use IO\Services\SessionStorageService;
 use IO\Services\UrlBuilder\UrlQuery;
 use ContextResult\Services\UrlBuilder\MyVariationUrlBuilder;
 use Plenty\Plugin\Http\Request;
