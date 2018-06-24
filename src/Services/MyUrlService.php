@@ -5,13 +5,13 @@ namespace ContextResult\Services;
 use IO\Helper\MemoryCache;
 use IO\Services\UrlBuilder\CategoryUrlBuilder;
 use IO\Services\UrlBuilder\UrlQuery;
-use ContextResult\Services\UrlBuilder\VariationUrlBuilder;
+use ContextResult\Services\UrlBuilder\MyVariationUrlBuilder;
 use Plenty\Plugin\Http\Request;
 use IO\Services\UrlService;
 
 class MyUrlService extends UrlService
 {
-  parent::getVariationURL( $itemId, $variationId, $lang = null )
+  public function getVariationURL( $itemId, $variationId, $lang = null )
   {
       if ( $lang === null )
       {
@@ -22,7 +22,7 @@ class MyUrlService extends UrlService
           "variationUrl.$itemId.$variationId.$lang",
           function() use ($itemId, $variationId, $lang) {
               /** @var VariationUrlBuilder $variationUrlBuilder */
-              $variationUrlBuilder = pluginApp( VariationUrlBuilder::class );
+              $variationUrlBuilder = pluginApp( MyVariationUrlBuilder::class );
               $variationUrl = $variationUrlBuilder->buildUrl( $itemId, $variationId, $lang );
 
               if ( $variationUrl->getPath() !== null )

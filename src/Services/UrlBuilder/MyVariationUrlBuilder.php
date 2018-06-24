@@ -89,8 +89,7 @@ class MyVariationUrlBuilder
         $itemData = self::$urlPathMap[$itemId][$variationId][$lang];
 
         $variationResult = pluginApp(VariationRepositoryContract::class)->show($itemData['variation']['id'], ['variationProperties'], 'de');
-        $log = pluginApp(Loggable::class);
-        $log->getLogger("ContextResult\Services\UrlBuilder")->error("variationResult", $variationResult);
+        $this->getLogger("ContextResult\Services\UrlBuilder")->error("variationResult", $variationResult);
 
         if ( count( $itemData ) )
         {
