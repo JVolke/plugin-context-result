@@ -19,10 +19,10 @@ class ContextResultSingleItemContext extends SingleItemContext implements Contex
   {
     parent::init($params);
     $this->freeField = pluginApp(ItemRepositoryContract::class)->show($this->item['documents'][0]['data']['item']['id']);
-    $options = [
+    $options = array(
       "itemId"   => $this->item['documents'][0]['data']['item']['id'],
       "relation" => "Accessory"
-    ];
+    );
     $searchFactory = CrossSellingItems::getSearchFactory( $options );
     $searchFactory->setPage(1,4);
     $result = pluginApp(ItemSearchService::class)->getResult( $searchFactory );
