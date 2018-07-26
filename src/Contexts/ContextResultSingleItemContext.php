@@ -8,6 +8,7 @@ use Plenty\Modules\Item\Item\Contracts\ItemRepositoryContract;
 use IO\Services\ItemSearch\Services\ItemSearchService;
 use IO\Services\ItemSearch\SearchPresets\CrossSellingItems;
 use Plenty\Modules\Item\Variation\Contracts\VariationRepositoryContract;
+use Plenty\Modules\Item\VariationProperty\Contracts\VariationPropertyValueRepositoryContract;
 use Plenty\Plugin\Log\Loggable;
 
 class ContextResultSingleItemContext extends SingleItemContext implements ContextInterface
@@ -30,7 +31,7 @@ class ContextResultSingleItemContext extends SingleItemContext implements Contex
     $this->getLogger(__METHOD__)->error("Debug Cross Selling", $result);
     $with = [ "variationProperties" ];
     $lang = "de";
-    $mainVariationProperties = pluginApp(VariationRepositoryContract::class)->show($this->item['documents'][0]['data']['variation']['id'], $with, $lang);
+    $mainVariationProperties = pluginApp(VariationPropertyValueRepositoryContract::class)->findByVariationId($this->item['documents'][0]['data']['variation']['id']);
     $this->getLogger(__METHOD__)->error("Debuggin", $mainVariationProperties);
 
   }
