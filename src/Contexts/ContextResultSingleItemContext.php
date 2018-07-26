@@ -30,7 +30,7 @@ class ContextResultSingleItemContext extends SingleItemContext implements Contex
     $this->getLogger(__METHOD__)->error("Debug Cross Selling", $result);
     $with = [ "variationProperties" => 1 ];
     $lang = "de";
-    $mainVariationProperties = pluginApp(VariationRepositoryContract::class)->show($this->item['documents'][0]['data']['variation']['mainVariationId'], $with, $lang);
+    $mainVariationProperties = pluginApp(VariationRepositoryContract::class)->show($this->item['documents'][0]['data']['variation']['id'], $with, $lang);
     $this->getLogger(__METHOD__)->error("Debuggin", $mainVariationProperties);
 
   }
