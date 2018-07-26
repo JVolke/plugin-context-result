@@ -31,7 +31,7 @@ class ContextResultSingleItemContext extends SingleItemContext implements Contex
     $with = [ "variationProperties" => 1 ];
     $lang = "de";
     $mainVariationProperties = pluginApp(VariationRepositoryContract::class)->show($this->item['documents'][0]['data']['item']['id'], $with, $lang);
-    $this->getLogger(__MEHOD__)->error("Debuggin", $mainVariationProperties);
+    $this->getLogger(__METHOD__)->error("Debuggin", $mainVariationProperties);
 
   }
 }
