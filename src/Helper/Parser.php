@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
  * This file is part of HtmlCompress.
  *
@@ -10,8 +10,8 @@
 
 namespace ContextResult\HtmlCompress;
 
-use WyriHaximus\HtmlCompress\Compressor\CompressorInterface;
-use WyriHaximus\HtmlCompress\Compressor\HtmlCompressor;
+use ContextResult\HtmlCompress\Compressor\CompressorInterface;
+use ContextResult\HtmlCompress\Compressor\HtmlCompressor;
 
 /**
  * Class Parser.

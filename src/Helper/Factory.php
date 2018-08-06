@@ -14,14 +14,9 @@ use ContextResult\HtmlCompress\Compressor\BestResultCompressor;
 use ContextResult\HtmlCompress\Compressor\CssMinCompressor;
 use ContextResult\HtmlCompress\Compressor\CssMinifierCompressor;
 use ContextResult\HtmlCompress\Compressor\JavaScriptPackerCompressor;
-use ContextResult\HtmlCompress\Compressor\JShrinkCompressor;
 use ContextResult\HtmlCompress\Compressor\JSMinCompressor;
 use ContextResult\HtmlCompress\Compressor\JSqueezeCompressor;
-use ContextResult\HtmlCompress\Compressor\MMMCSSCompressor;
-use ContextResult\HtmlCompress\Compressor\MMMJSCompressor;
 use ContextResult\HtmlCompress\Compressor\ReturnCompressor;
-use ContextResult\HtmlCompress\Compressor\YUICSSCompressor;
-use ContextResult\HtmlCompress\Compressor\YUIJSCompressor;
 
 /**
  * Class Factory.

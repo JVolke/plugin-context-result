@@ -16,7 +16,7 @@ use ContextResult\HtmlCompress\Factory;
  * @author Marcel Voigt <mv@noch.so>
  * @copyright Copyright (c) 2015 Marcel Voigt <mv@noch.so>
  */
-class Extension extends \Twig_Extension
+class Extension extends Twig_Extension
 {
     /**
      * @var array
@@ -46,13 +46,7 @@ class Extension extends \Twig_Extension
         $this->parser = Factory::constructSmallest();
         $this->callable = array($this, 'compress');
     }
-    public function compress(Twig_Environment $twig, $html)
-    {
-        if (!$twig->isDebug() || $this->forceCompression) {
-            return $this->parser->compress($html);
-        }
-        return $html;
-    }
+
     public function getTokenParsers()
     {
         return array(
@@ -62,13 +56,13 @@ class Extension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction('htmlcompress', $this->callable, $this->options),
+          pluginApp(TwigFactory::class)->createSimpleFunction('htmlcompress', $this->callable, $this->options);
         );
     }
     public function getFilters()
     {
         return array(
-            new \Twig_SimpleFilter('htmlcompress', $this->callable, $this->options),
+            pluginApp(TwigFactory::class)->createSimpleFilter('htmlcompress', $this->callable, $this->options)
         );
     }
 }
