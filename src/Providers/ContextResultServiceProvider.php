@@ -34,6 +34,12 @@ class ContextResultServiceProvider extends ServiceProvider
 
     public function boot(Dispatcher $dispatcher, ConfigRepository $config)
     {
+            $dispatcher->listen('IO.tpl.item', function(TemplateContainer $container, $templateData)
+            {
+            $container->setTemplate('ContextResult::Item.SingleItemWrapper');
+            return false;
+            }, 0);
+
           $enabledOverrides = explode(", ", $config->get("ContextResult.fields.override"));
           if (in_array("single_item", $enabledOverrides) || in_array("all", $enabledOverrides))
           {
