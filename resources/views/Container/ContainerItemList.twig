@@ -11,6 +11,7 @@
         </div>
 
         <div v-else v-for="item in items" :key="item.data.variation.id" :class="columnWidths">
+        <h2>Die andere Container Item List</h2>
             <category-item :item-data="item.data" decimal-count="{{ decimalCount }}" image-url-accessor="urlMiddle"></category-item>
         </div>
     </div>

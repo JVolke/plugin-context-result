@@ -15,6 +15,7 @@ class ContextResultSingleItemContext extends SingleItemContext implements Contex
   use Loggable;
   public $freeField;
   public $crossSelling;
+  public $crossSellingSimilar;
 
   public function init($params)
   {
@@ -28,6 +29,14 @@ class ContextResultSingleItemContext extends SingleItemContext implements Contex
     $searchfactory->setPage(1,4);
     $result = pluginApp(ItemSearchService::class)->getResult( $searchfactory );
     $this->crossSelling = $result['documents'];
+    $options2 = [
+      "itemId"   => $this->item['documents'][0]['data']['item']['id'],
+      "relation" => "Similar"
+    ];
+    $searchfactory2 = CrossSellingItems::getSearchFactory( $options2 );
+    $searchfactory2->setPage(1,4);
+    $result2 = pluginApp(ItemSearchService::class)->getResult( $searchfactory2 );
+    $this->crossSellingSimilar = $result2['documents'];
     $this->getLogger(__METHOD__)->error("Debug Cross Selling", $result['documents']);
     $with = [ 'properties' => 1 ];
     $lang = "de";

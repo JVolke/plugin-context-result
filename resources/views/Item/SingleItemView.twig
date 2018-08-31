@@ -23,10 +23,17 @@
     <div slot="ItemListContainer">{{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item) }}</div>
     <div slot="FeedbackContainer">{{ LayoutContainer.show("Ceres::SingleItem.FeedbackContainer", item) }}</div>
     <div slot="CrossSelling">
-      <h2>Hi Cross Selling please Show Up</h2>
-        {% include "ContextResult::Container.IncludeContainerOwn" with {'crossSelling': crossSelling} %}
+      {% if crossSelling|length > 0 %}
+      {{ component("ContextResult::Container.ContainerItemListOwn") }}
+      <p>I Am here</p>
+      <container-item-list :items="{{ crossSelling | json_encode }}"></container-item-list>
+      {% endif %}
     </div>
-    <div slot="CrossSellingCross">
-        {% include "ContextResult::Container.IncludeContainer" with {'crossSelling': crossSellingCross} %}
+    <div slot="crossSellingSimilar">
+      {% if crossSellingSimilar|length > 0 %}
+      {{ component("ContextResult::Container.ContainerItemList") }}
+      <p>I Am Second</p>
+      <container-item-list :items="{{ crossSellingSimilar | json_encode }}"></container-item-list>
+      {% endif %}
     </div>
 </single-item>
