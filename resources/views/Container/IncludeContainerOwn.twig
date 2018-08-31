@@ -1,3 +1,5 @@
 {{ component("ContextResult::Container.ContainerItemListOwn") }}
+{% if crossSelling|length > 0 %}
 <p>I Am here</p>
 <container-item-list :items="{{ crossSelling | json_encode }}"></container-item-list>
+{% endif %}

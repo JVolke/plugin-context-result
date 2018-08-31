@@ -23,13 +23,9 @@
     <div slot="ItemListContainer">{{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item) }}</div>
     <div slot="FeedbackContainer">{{ LayoutContainer.show("Ceres::SingleItem.FeedbackContainer", item) }}</div>
     <div slot="CrossSelling">
-      {% if crossSelling|length > 0 %}
         {% include "ContextResult::Container.IncludeContainerOwn" with {'crossSelling': crossSelling} %}
-      {% endif %}
     </div>
     <div slot="CrossSellingCross">
-      {% if crossSelling|length > 0 %}
-        {% include "ContextResult::Container.IncludeContainer" with {'crossSelling': crossSelling} %}
-      {% endif %}
+        {% include "ContextResult::Container.IncludeContainer" with {'crossSelling': crossSellingCross} %}
     </div>
 </single-item>
