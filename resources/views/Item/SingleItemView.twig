@@ -23,8 +23,8 @@
     <div slot="ItemListContainer">{{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item) }}</div>
     <div slot="FeedbackContainer">{{ LayoutContainer.show("Ceres::SingleItem.FeedbackContainer", item) }}</div>
     <div slot="CrossSelling">
+      {{ component("ContextResult::Container.ContainerItemListOwn") }}
       {% if crossSelling|length > 0 %}
-        {{ component("ContextResult::Container.ContainerItemListOwn") }}
         <container-item-list :items="{{ crossSelling | json_encode }}"></container-item-list>
       {% else %}
         {{ component( "Ceres::Containers.Components.ContainerItemList" ) }}

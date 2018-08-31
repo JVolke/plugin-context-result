@@ -28,7 +28,7 @@ class ContextResultSingleItemContext extends SingleItemContext implements Contex
     $searchfactory->setPage(1,4);
     $result = pluginApp(ItemSearchService::class)->getResult( $searchfactory );
     $this->crossSelling = $result['documents'];
-    $this->getLogger(__METHOD__)->error("Debug Cross Selling", $result);
+    $this->getLogger(__METHOD__)->error("Debug Cross Selling", $result['documents']);
     $with = [ 'properties' => 1 ];
     $lang = "de";
     $mainVariationProperties = pluginApp(VariationRepositoryContract::class)->show($this->item['documents'][0]['data']['variation']['id'], $with, $lang);
