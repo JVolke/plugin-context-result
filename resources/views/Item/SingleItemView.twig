@@ -24,9 +24,14 @@
     <div slot="FeedbackContainer">{{ LayoutContainer.show("Ceres::SingleItem.FeedbackContainer", item) }}</div>
     <div slot="CrossSelling">
       {% if crossSelling|length > 0 %}
-        {{ component("ContextResult::Container.ContainerItemListOwn") }}
-        <p>I Am here</p>
-        <container-item-list :items="{{ crossSelling | json_encode }}"></container-item-list>
+      <h2>Twig</h2>
+      <ul class="some">
+        {% for crossItem in crossSelling %}
+          <li>
+            {% include "Ceres::Category.Item.Partials.CategoryListItem" with {'item':crossItem } %}
+          </li>
+        {% endfor %}
+      </ul>
       {% endif %}
     </div>
     <div slot="crossSellingSimilar">
