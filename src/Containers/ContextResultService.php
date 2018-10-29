@@ -3,7 +3,7 @@ namespace ContextResult\Containers;
 
 use Plenty\Plugin\Templates\Twig;
 
-class Service
+class ContextResultService
 {
     public function call(Twig $twig):string
     {
