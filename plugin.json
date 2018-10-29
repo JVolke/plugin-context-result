@@ -8,5 +8,13 @@
     "price"             :   0.00,
     "categories"        :   [3527],
     "type"              :   "theme",
-    "serviceProvider"   :   "ContextResult\\Providers\\ContextResultServiceProvider"
+    "serviceProvider"   :   "ContextResult\\Providers\\ContextResultServiceProvider",
+    "dataProviders"         :
+    [
+        {
+            "key"           :"ContextResult\\Containers\\ContextResultService",
+            "name"          :"Krause & Sohn",
+            "description"   :"Add a Container"
+        }
+    ]
 }
