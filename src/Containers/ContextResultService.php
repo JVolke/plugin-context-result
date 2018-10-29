@@ -7,6 +7,6 @@ class ContextResultService
 {
     public function call(Twig $twig):string
     {
-        return $twig->render('ContextResult::Containers.Service');
+        return $twig->render('ContextResult::Container.Service');
     }
 }
